@@ -1,4 +1,5 @@
-# EasyForm `v1.0.0`
+# EasyForm
+`v1.0.0`
 - 基于elementUI Form组件开发的表单组件，它会省去绝大多数的表单操作和冗长的各种烦人配置。
 
 ## 使用方法
@@ -65,7 +66,7 @@ validator: true
   }
 ````
 
-组件内置的常用类型校验
+- 组件内置的常用类型校验
 
 `car`:  请输入正确的车牌号
 
@@ -109,19 +110,19 @@ validator: true
 
 ### EasyForm 组件方法
 
-#### validate()
+#### `validate()`
  表单验证(elementUI form组件的原生validate方法)
 
 
-#### resetFields()
+#### `resetFields()`
  对整个表单进行重置，将所有字段值重置为初始值并移除校验结果
 
 
-#### clearValidate(string|array)
+#### `clearValidate(string|array)`
  清理指定字段的表单验证信息。 参数是一个或多个需要清除验证信息的表单属性名。如果省略了参数，将清除所有字段的验证信息。
 
 
-#### setValuesWithArray(array) 批量表单项赋值
+#### `setValuesWithArray(array)` 批量表单项赋值
 ##### array参数说明
  | 参数名  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
@@ -129,7 +130,7 @@ validator: true
  | value  | string / number  | 是  | 表单项值  |
 
 
-#### setValuesWithArray(object) 批量表单项赋值
+#### `setValuesWithArray(object)` 批量表单项赋值
 ##### object参数说明
  | 参数名  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
@@ -137,7 +138,7 @@ validator: true
  | value  | string / number  | 是  | 表单项值  |
 
 
-#### value(string, string|number) 单个表单项取值或赋值
+#### `value(string, string|number)` 单个表单项取值或赋值
 ##### 参数说明
  | 参数  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
@@ -145,7 +146,7 @@ validator: true
  | 参数2  | string / number  | 否  | 传入时为赋值，不传入为取值操作  |
 
 
- #### setDisableItem(string, boolean) 设置单个表单项的是否禁用
+ #### `setDisableItem(string, boolean)` 设置单个表单项的是否禁用
  ##### 参数说明
  | 参数  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
@@ -153,7 +154,7 @@ validator: true
  | 参数2  | boolean  | 是  | true禁用，false启用  |
 
 
- #### setDisableItems(object) 同时设置多个表单项的是否禁用
+ #### `setDisableItems(object)` 同时设置多个表单项的是否禁用
  ##### object参数说明
  | 参数名  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
@@ -161,7 +162,7 @@ validator: true
  | bol  | boolean  | 是  | true禁用，false启用  |
 
 
- #### setDisplayItem(string, boolean, boolean) 设置单个表单项的显示隐藏
+ #### `setDisplayItem(string, boolean, boolean)` 设置单个表单项的显示隐藏
   tips: 这个方法只会控制表单项在视觉上的显示或隐藏，并不会改变该项的实际值。换句话说，即使该项设置了隐藏，在提交表单时，
        该项的值仍然会被提交。如果你想完全的移除这个表单项请使用deleteItem方法
  ##### 参数说明
@@ -172,7 +173,7 @@ validator: true
  | 参数3  | boolean  | 否  | 该值为true会在隐藏表单项的同时清空该项的值  |
 
 
- #### setDisplayItems(object, boolean) 同时设置多个表单项的显示隐藏
+ #### `setDisplayItems(object, boolean)` 同时设置多个表单项的显示隐藏
  ##### 参数说明
  | 参数  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
@@ -180,31 +181,31 @@ validator: true
  | 参数2  | boolean  | 否  | 该值为true会在隐藏表单项的同时清空该项的值  |
 
 
- #### pushItem(object) 向表单中添加表单项
+ #### `pushItem(object)` 向表单中添加表单项
  ##### 参数说明
  可以参考 [form参数说明]
 
 
- #### pushItems(array) 向表单中添加多个表单项
+ #### `pushItems(array)` 向表单中添加多个表单项
  ##### 参数说明
  可以参考 [form参数说明]
 
 
- #### deleteItem(string) 移除某个表单项
+ #### `deleteItem(string)` 移除某个表单项
  ##### 参数说明
  | 参数  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
  | 参数1  | string  | 是  | 表单项字段名  |
 
 
- #### deleteItems(array) 批量移除多个表单项
+ #### `deleteItems(array)` 批量移除多个表单项
  ##### 参数说明
  | 参数  | 类型  | 必填  | 说明  |
  | :-----: | :-----: | :-----: | :-----: |
  | 参数1  | array  | 是  | 表单项字段名  |
 
 
- #### setOptionsItem(string, array) 设置单个表单项(checkbox, radio, select)的选项列表
+ #### `setOptionsItem(string, array)` 设置单个表单项(checkbox, radio, select)的选项列表
   tips: 如果你想让某个值默认选中，那么请为这个值设置default:true（如果选项列表中设置了多个default:true， 则使用最后一个）
  ##### 参数说明
  | 参数  | 类型  | 必填  | 说明  |
@@ -219,4 +220,4 @@ validator: true
  | default  | boolean  | 否  | 控制选项默认选中  |
 
 
- #### getValues() 获取表单结果值
+ #### `getValues()` 获取表单结果值
