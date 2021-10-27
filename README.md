@@ -1,4 +1,4 @@
-# EasyForm
+# EasyForm `v1.0.0`
 - 基于elementUI Form组件开发的表单组件，它会省去绝大多数的表单操作和冗长的各种烦人配置。
 
 ## 使用方法
